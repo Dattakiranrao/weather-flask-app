@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link rel="stylesheet" href="/static/display.css">
 </head>
+
 <body>
-    <div class="container">
         <header>
-            <h2>Weather Report</h2>
+            <h1>Weather Report</h1>
         </header>
-    </div>
-    <hr>
     <div class="container">
-        <big>Have a Good day</big><br>
-        <big>City : {{info['name']}}</big><br>
-        <big>Weather : {{info['weather'][0]['description']}}</big><br>
-        <big>Temprature : {{(info['main']['temp'] - 273.15)}}`C</big><br>
-        <big>Country : {{info['sys']['country']}}</big><br>
+        <div class="weather">
+            <big>Have a Good day</big><br>
+            <big>City : {{info['name']}}</big><br>
+            <big>Weather : {{info['weather'][0]['description']}}</big><br>
+            <big>Temprature : {{temp}}`C</big><br> 
+            <big>Country : {{info['sys']['country']}}</big><br>
+        </div>
     </div>
-    <hr>
-    <div class="container">
-        <a href="/back"><input type="button" value="Home"></a>
-        <footer>
-            <h4>Thank You For Using Our App</h4>
-        </footer>
+    <div class="back">
+        <a href="/back"><button class="button">Home</button></a>
     </div>
+    <footer>
+        <h4>Thank You For Using Our App</h4>
+    </footer>
 </body>
+
 </html>

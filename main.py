@@ -1,5 +1,6 @@
 from flask import Flask, redirect, render_template, request
 import requests
+import math 
 
 app = Flask(__name__)
 
@@ -14,7 +15,9 @@ def home():
         response = requests.get(request_url)
         data = response.json()
         info = data
-        return render_template('display.html', info = info)
+        temprature = info['main']['temp']
+        temp = round(int(temprature) - 273.15)
+        return render_template('display.html', info = info, temp = temp)
     return render_template('home.html')
 
 @app.route('/back')
