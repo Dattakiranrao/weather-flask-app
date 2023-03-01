@@ -71,7 +71,6 @@ opencv-contrib-python==4.5.4.60
 opencv-python==4.5.4.60
 openpyxl==3.0.10
 packaging==21.3
-pandas==1.4.1
 pandocfilters==1.5.0
 parse==1.19.0
 parso==0.8.3
