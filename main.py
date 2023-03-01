@@ -4,7 +4,7 @@ import math
 
 app = Flask(__name__)
 
-API_KEY = 'Your api key'
+API_KEY = 'a8e20995610bceaa81374001e509b5c4'
 BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
 
 @app.route('/', methods=['GET', 'POST'])
